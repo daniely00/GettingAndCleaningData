@@ -4,14 +4,6 @@
 #Load required package(s)
 library(reshape2)
 
-# Download zip-file to wd
-URL<-"https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-download.file(URL, "getdata_dataset.zip")
-
-# Unzip zip-file in wd
-filePath <- getwd()
-unzip(paste0(filePath, "/getdata_dataset.zip"))
-
 # Read activity labels and rename columns
 activityLabels <- read.table("UCI HAR Dataset/activity_labels.txt", col.names = 
                                      c("activity_id", "activity_name"))
